@@ -1,0 +1,26 @@
+version: "2.0"
+
+stories:
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: check_balance
+    entities:
+    - amount-of-money: current balance
+  - slot_was_set:
+    - amount-of-money: current balance
+  - action: action_show_balance
+  - intent: check_balance
+    entities:
+    - amount-of-money: current balance
+  - slot_was_set:
+    - amount-of-money: current balance
+  - action: action_show_balance
+  - intent: inform
+  - action: utter_ask_whatelse
+  - intent: deny
+  - action: utter_ask_whatelse
+  - action: utter_ok

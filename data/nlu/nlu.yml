@@ -95,6 +95,7 @@ nlu:
     - what's my account [balance](amount-of-money)?
     - what's my account [balance](amount-of-money)
     - whats my account [balance](amount-of-money)
+    - could u show my [balance]{"entity": "amount-of-money", "value": "current balance"} again
     - what is my [bank](account_type) account [balance](amount-of-money)
     - what's my [bank](account_type) account [balance](amount-of-money)?
     - what's my [bank](account_type) account [balance](amount-of-money)

@@ -30,6 +30,20 @@ help:
 	@echo "	docker-push"
 	@echo "		Pushes docker images to dockerhub"
 
+install:
+	python -m pip install --upgrade "pip<20"
+	pip install -r requirements.txt
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en 
+	pip install -e .
+
+install-dev:
+	python -m pip install --upgrade "pip<20"
+	pip install -r requirements-dev.txt
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en 
+	pip install -e .
+
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
